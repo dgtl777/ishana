@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color:bisque;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+.angel {
+    color: blue;
+}
+
+#tazbeen {
+    color: green;
+}
+
+#ishana {
+    color: purple;
+}
