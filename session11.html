@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Cover</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url('background.jpg');
+            text-align: center;
+        }
+
+        .border {
+            width: 60vw;
+            height: 80vh;
+            margin: auto;
+            padding: 60px;
+            margin-top: 100px;
+            background: url('border.png');
+            background-repeat: none;
+            background-size: cover;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            background: url('content.jpg')
+        }
+
+        .mainTitle {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 54px;
+            padding-top: 320px;
+            color: crimson;
+        }
+
+        .name {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: darkred;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="border">
+        <div class="content">
+            <h2 class="mainTitle">My Journal!</h2>
+            <h3 class="name">Jay</h3>
+        </div>
+    </div>
+</body>
+
+</html>
