@@ -37,7 +37,11 @@
         }
 
         .textBox {
-            width: 60%;
+            width: 100%;
+        }
+
+        .address {
+            width: 100%;
         }
     </style>
 </head>
@@ -48,24 +52,21 @@
     </header>
     <form>
         <h2>Please Fill The Form</h2>
-        <label for="">First Name:</label>
-        <input class="textBox" type="text"><br>
-        <label for="">Middle Name:</label>
-        <input class="textBox" type="text"><br>
-        <label for="">Last Name:</label>
-        <input class="textBox" type="text"><br>
-        <label for="">Address:</label>
-        <textarea name="" id="" cols="30" rows="3"></textarea><br>
-        <label for="">Phone No:</label>
-        <input class="textBox" type="text"><br>
+        <input class="textBox" type="text" placeholder="First Name" required><br><br>
+        <input class="textBox" type="text" placeholder="Middle Name"><br><br>
+        <input class="textBox" type="text" placeholder="Last Name" required><br><br>
+        <textarea class="address" name="" id="" cols="30" rows="3" placeholder="Address" required></textarea><br><br>
+        <input class="phone" type="text" maxlength="10" placeholder="Phone Number"><br><br>
         <label for="">Gender:</label>
         <label for="">Male:</label>
-        <input type="radio" name="gender">
+        <input type="radio" name="gender" required>
         <label for="">Female:</label>
-        <input type="radio" name="gender"><br>
-        <label for="">Select Your Favourite Subjects:</label><br>
+        <input type="radio" name="gender" required><br><br>
+        <label for="">D.O.B:</label>
+        <input type="date" required><br><br>
+        <label for="">Select Your Favourite Subjects:</label><br><br>
         <label for="">English</label>
-        <input type="checkbox">
+        <input type="checkbox" checked disabled>
         <label for="">Arabic</label>
         <input type="checkbox">
         <label for="">Maths</label>
@@ -73,7 +74,18 @@
         <label for="">Science</label>
         <input type="checkbox">
         <label for="">Social Science</label>
-        <input type="checkbox">
+        <input type="checkbox"><br><br>
+        <label for="">Favourite Color</label>
+        <select name="" id="">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue" selected>Blue</option>
+        </select><br><br>
+        <label for="">Upload Documents:</label>
+        <input type="file" required><br><br>
+        <label for="">Rate Your Experience:</label>
+        <input type="range" min="0" max="100"><br><br>
+        <input type="submit" value="Submit Form" name="" id="">
     </form>
 </body>
 
