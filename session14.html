@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: lightgrey;
+        }
+
+        form {
+            width: 400px;
+            height: 340px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: auto;
+            margin-top: 300px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .email,
+        .password,
+        .submit {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .submit {
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+            border: none;
+            background-color: #0066ff;
+        }
+
+        .cna {
+            font-weight: bolder;
+            border-radius: 10px;
+            font-size: 18px;
+            padding: 15px;
+            color: white;
+            width: 60%;
+            border: none;
+            background-color: #33cc33;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input class="email" type="text" placeholder="Email address or phone number"><br><br>
+        <input class="password" type="password" placeholder="Password"><br><br>
+        <input class="submit" type="submit" value="Log In"><br><br>
+        <a class="forget" href="">Forgotten password</a><br><br>
+        <div>
+            <button class="cna">Create New Account</button>
+        </div>
+    </form>
+</body>
+
+</html>
