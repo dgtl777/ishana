@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Questionaire</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url('https://cdn2.scratch.mit.edu/get_image/gallery/26132279_200x130.png');
+            background-size: 100%;
+            text-align: center;
+        }
+
+        form {
+            width: 600px;
+            height: 500px;
+            background-color: rgba(255, 255, 255, .9);
+            border-radius: 10px;
+            padding: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: auto;
+            margin-top: 300px;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, .4);
+        }
+
+        .artist,
+        .song {
+            width: 100%;
+            padding: 15px;
+        }
+
+        .submit {
+            width: 100px;
+            height: 50px;
+            background-color: #0066ff;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+
+        fieldset {
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <u><i>Music Questionaire</i></u>
+        </h1>
+    </header>
+    <form action="thanks.html">
+        <fieldset>
+            <legend>Please Fill In The Questions!</legend>
+            <label for="">Do you like music?</label><br><br>
+            <label for="">Yes</label>
+            <input type="radio" name="music" required>
+            <label for="">No</label>
+            <input type="radio" name="music" required><br><br>
+            <label for="">Which Genre of Music do you like?</label><br><br>
+            <label for="">Country</label>
+            <input type="checkbox">
+            <label for="">Folk</label>
+            <input type="checkbox">
+            <label for="">Rock</label>
+            <input type="checkbox">
+            <label for="">Pop</label>
+            <input type="checkbox">
+            <label for="">HipHop</label>
+            <input type="checkbox">
+            <label for="">Metal</label>
+            <input type="checkbox"><br><br>
+            <input class="artist" type="text" placeholder="Who is your favourite music artiste?" required><br><br>
+            <input class="song" type="text" placeholder="Which song of the artiste you like the most?" required><br><br>
+            <label for="">How will you rate the artiste from 0 to 100?</label><br><br>
+            <input type="range" min="0" max="100" name="" id=""><br><br>
+            <input class="submit" type="submit" value="Submit" name="" id="">
+        </fieldset>
+    </form>
+</body>
+
+</html>
