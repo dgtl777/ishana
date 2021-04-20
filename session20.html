@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 20</title>
+    <link rel="shortcut icon"
+        href="https://media.gettyimages.com/vectors/spoon-and-fork-outline-icon-pixel-perfect-vector-id1094064958?s=2048x2048"
+        type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: orange;
+        }
+
+        nav {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            border-bottom: 5px solid white;
+        }
+
+        ul {
+            display: flex;
+            margin-left: auto;
+            list-style: none;
+        }
+
+        a {
+            color: white;
+            font-weight: bolder;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: orangered;
+        }
+
+        .content {
+            background-color: orangered;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .menu {
+            height: 30%;
+            width: 100%;
+            background-color: beige;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        img {
+            width: 256px;
+            height: 200px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, .6);
+        }
+
+        img:hover {
+            transform: scale(1.2, 1.2);
+        }
+
+        marquee {
+            font-size: 24px;
+            background-color: yellow;
+            font-weight: bolder;
+        }
+
+        .bottomMenu {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .veg {
+            margin: auto;
+            margin-top: 50px;
+            display: block;
+        }
+
+        p {
+            font-size: 24px;
+            text-align: center;
+            color: white;
+            font-weight: bolder;
+            margin-top: 50px;
+        }
+
+        .para {
+            background-color: wheat;
+            color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h2>Restro.Com</h2>
+        <ul>
+            <a href="">
+                <li>
+                    HOME
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    ABOUT
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    CONTACT
+                </li>
+            </a>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="menu">
+            <img src="https://img.taste.com.au/RhosJEon/w720-h480-cfill-q80/taste/2016/11/roasted-stuffed-mushrooms-80629-1.jpeg"
+                alt="">
+            <img src="https://www.thespruceeats.com/thmb/Mdn4OWlKjy1theBgen0zbxsj_xg=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/vegetarian-bean-and-barley-vegetable-soup-3377970_15-5b3f810146e0fb003758ff8b.jpg"
+                alt="">
+            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2018%2F11%2F05%2Fcopycat-longhorn-ranch-chicken-dcms-large-2000.jpg"
+                alt="">
+        </div>
+        <marquee>50% OFF ON ALL ORDERS ABOVE $100/-</marquee>
+        <div class="bottomMenu">
+            <img class="veg"
+                src="https://nhncwtttsf-flywheel.netdna-ssl.com/6/wp-content/uploads/sites/29/2019/01/Eat-Vegetables.jpg"
+                alt="">
+            <p class="quote"><q><i>Nothing Brings People Together Like Good Food</i></q></p>
+            <p class="para">Come Eat At Our One Of A Kind Restro, And Enjoy The Best Delicacies. Cause The
+                Best Memories Are Made Around The Table</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
