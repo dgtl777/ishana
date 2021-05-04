@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 24</title>
+    <style>
+        body{
+            background-color: paleturquoise;
+            text-align: center;
+        }
+        h1{
+            color: navy;
+        }
+        #drop{
+            width: 300px;
+            height: 150px;
+            border: 1px solid black;
+            margin: auto;
+        }
+        #drag{
+            width: 200px;
+            height: 120px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web Storage</h1>
+    </header>
+    <h2 id="name"></h2>
+    <h2 id="session"></h2>
+    <h2 id="ice"></h2>
+    <h1>Geo Location</h1>
+    <h2 id="myLocation"></h2>
+    <h1>Drag and Drop</h1>
+
+    <div id="drop"  ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>
+
+    <img id="drag" ondragstart="drag(event)" draggable="true" src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510_960_720.jpg" alt="">
+    
+</body>
+<script>
+    function allowDrop(ev){
+        ev.preventDefault();
+    }
+    function drag(ev){
+        ev.dataTransfer.setData("test", ev.target.id);
+    }
+    function drop(ev){
+        event.preventDefault();
+        var data = ev.dataTransfer.getData("test");
+        ev.target.appendChild(document.getElementById(data));
+    }
+
+    localStorage.setItem("today","Tuesday");
+    document.getElementById("name").innerHTML = localStorage.getItem("today");
+
+    localStorage.session = "Session 24";
+    document.getElementById("session").innerHTML = localStorage.session;
+
+    sessionStorage.icecream = "blueberry";
+    document.getElementById("ice").innerHTML = sessionStorage.icecream;
+
+    navigator.geolocation.getCurrentPosition(showLocation);
+
+    function showLocation(position){
+        document.getElementById("myLocation").innerHTML ="latitude = " + 
+        position.coords.latitude + "longitude = " +position.coords.longitude;
+    }
+</script>
+</html>
