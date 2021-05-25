@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 30</title>
+    <style>
+        body{
+            background-color: skyblue;
+            text-align: center;
+        }
+        p{
+            color: slateblue;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Javascript Datatypes</h1>
+    </header>
+    <p id="data">The Data</p>
+    <p id="name">Name</p>
+    <button onclick="calculate(3+5)">Calculate 3+5</button>
+    <button onclick="calculate(5+11)">Calculate 5+11</button>
+    <button onclick="calculate(7+9)">Calculate 7+9</button>
+    
+    <button onclick='myname("Ishana")'>Ishana</button>
+    <button onclick='myname("Tazbeen")'>Tazbeen</button>
+
+</body>
+<script>
+    function calculate(number){
+        console.log("hello");
+        document.getElementById("data").innerText = number;
+    }
+    function myname(name){
+        document.getElementById("name").innerText = name;
+    }
+
+
+    var student = { ishana: { project : "Blog", good: true},
+    tazbeen: { project: "Restaurant", good: true}
+    }
+    var name = "";
+    var garbage = undefined;
+    console.log(garbage);
+    var number = 25;
+    console.log(number);
+    var text = "Today is Tuesday";
+    console.log(text);
+    var add = 25 + 27 + "Hello";
+    var point = 3.14;
+    point = 14.7;
+    console.log(point);
+    console.log(add);
+</script>
+</html>
