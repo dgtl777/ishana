@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 33</title>
+    <style>
+        body{
+            background-color: orange;
+            text-align: center;
+        }
+        h1{
+            color: orangered;
+        }
+        .ball{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            margin:auto ;
+            animation-name: ballAnimation;
+            animation-duration: 4s;
+            animation-iteration-count: 4;
+            animation-direction: alternate;
+        }
+        @keyframes ballAnimation {
+            0%{
+                background-color: yellow;
+                border-radius: 0;
+                transform: rotate(0deg);
+                margin-top: 0px;
+            }
+            100%{
+                background-color: green;
+                border-radius: 50%;
+                transform: rotate(1080deg);
+                margin-top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><u>Animation</u></h1>
+    </header>
+    <div class="ball">
+
+    </div>
+    
+</body>
+</html>
