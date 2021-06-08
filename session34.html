@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 34</title>
+    <style>
+        body{
+            background-color: palevioletred;
+            text-align: center;
+            font-family: monospace;
+        }
+        h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Loops Statements</h1>
+    </header>
+    <input type="text" id="num">
+    <input type="text" id="multi">
+    <button onclick="calc()">Calculate</button>
+    <h2>The the multiplication table is:</h2>  
+    <h2 id="result"></h2>
+</body>
+<script>
+
+    function calc(){
+    var num = document.getElementById("num").value;
+    var multi = document.getElementById("multi").value;
+    var current = 1;
+    var result  = 0;
+
+    while(current<=parseInt(multi)){
+        result = num * current;
+        var output = document.createElement("p");
+        var text = num +" X "+ current +" = "+ result;
+        output.innerText = text;
+        document.getElementById("result").appendChild(output);
+        current = current + 1;
+    }
+}
+</script>
+</html>
