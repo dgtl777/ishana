@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 35</title>
+    <style>
+        body {
+            background-color: orange;
+            text-align: center;
+        }
+
+        h1 {
+            color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>DOM(Document Object Model) Objects</h1>
+    </header>
+    <h2>Window Object</h2>
+    <h3>Window Height</h3>
+    <h2 id="myWindowHeight"></h2>
+    <h3>Window Width</h3>
+    <h2 id="myWindowWidth"></h2>
+    <button onclick="resizeWindow()">Resize Window</button>
+    <h2>Href</h2>
+    <h2 id="myHref"></h2>
+    <h2>Host Name</h2>
+    <h2 id="myHost"></h2>
+    <h2>Path Name</h2>
+    <h2 id="myPath"></h2>
+    <button onclick="toGoogle()">Go To Google</button>
+    <button onclick="goBack()">Go Back</button>
+</body>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+    function toGoogle() {
+        window.location.assign("https://www.google.com/");
+    }
+    document.getElementById("myHref").innerText =
+        window.location.href;
+
+    document.getElementById("myHost").innerText =
+        window.location.hostname;
+
+    document.getElementById("myPath").innerText =
+        window.location.pathname;
+
+
+    myWindow = window.open("", "", "width=100", "height=100");
+    function resizeWindow() {
+        myWindow.resizeTo(250, 400);
+    }
+    document.getElementById("myWindowHeight").innerText =
+        window.innerHeight;
+    document.getElementById("myWindowWidth").innerText =
+        window.innerWidth;
+</script>
+
+</html>
