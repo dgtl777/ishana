@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 36</title>
+    <style>
+        body {
+            background-color: bisque;
+            text-align: center;
+        }
+
+        h1 {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Quiz Mania</h1>
+    </header>
+    <h3>Who is the King of the Jungle?</h3>
+    <label for="">Lion</label>
+    <input type="radio" name="king" value="Lion">
+    <label for="">Tiger</label>
+    <input type="radio" name="king" value="Tiger">
+
+    <h3>Which is the World's tallest building</h3>
+    <label for="">Burj Khalifa</label>
+    <input type="radio" name="building" value="Burj">
+    <label for="">Eiffel Tower</label>
+    <input type="radio" name="building" value="Eiffel">
+
+    <h3>Which is the King of fruits?</h3>
+    <label for="">Mango</label>
+    <input type="radio" id="fruit" name="fruit" value="Mango">
+    <label for="">Pineapple</label>
+    <input type="radio" id="fruit" name="fruit" value="Pineapple">
+
+    <h3>Which is the Queen of fruits?</h3>
+    <label for="">Litchi</label>
+    <input type="radio" name="queen" value="Litchi">
+    <label for="">Strawberry</label>
+    <input type="radio" name="queen" value="Strawberry"><br><br>
+
+    <button onclick="reveal()">Reveal Answer</button>
+
+    <template>
+        <h2>Answers</h2>
+        <h3>Who is the King of the Jungle?</h3>
+        <h4>Lion</h4>
+        <h3>Which is the World's tallest building</h3>
+        <h4>Burj Khalifa</h4>
+        <h3>Which is the King of fruits</h3>
+        <h4>Mango</h4>
+        <h3>Which is the Queen of fruits</h3>
+        <h4>Litchi</h4>
+    </template>
+
+</body>
+<script>
+
+    function reveal() {
+        var score = 0;
+        var fruit = document.querySelector('input[name="fruit"]:checked').value;
+        if (fruit == "Mango") {
+            score = score + 1;
+        }
+        var king = document.querySelector('input[name="king"]:checked').value;
+        if (king == "Lion") {
+            score = score + 1;
+        }
+        var queen = document.querySelector('input[name="queen"]:checked').value;
+        if (queen == "Litchi") {
+            score = score + 1;
+        }
+        var building = document.querySelector('input[name="building"]:checked').value;
+        if (building == "Burj") {
+            score = score + 1;
+        }
+        console.log(score);
+        var show = document.getElementsByTagName("template")[0];
+        var clone = show.content.cloneNode(true);
+        document.body.appendChild(clone);
+
+    }
+</script>
+
+</html>
