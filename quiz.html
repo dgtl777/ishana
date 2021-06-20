@@ -59,6 +59,8 @@
         <h3>Which is the Queen of fruits</h3>
         <h4>Litchi</h4>
     </template>
+    <h1>Your Score is:</h1>
+    <h1 id="score"></h1>
 
 </body>
 <script>
@@ -81,11 +83,10 @@
         if (building == "Burj") {
             score = score + 1;
         }
-        console.log(score);
         var show = document.getElementsByTagName("template")[0];
         var clone = show.content.cloneNode(true);
         document.body.appendChild(clone);
-
+        document.getElementById("score").innerText = score;
     }
 </script>
 
