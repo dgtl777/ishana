@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 38</title>
+    <style>
+        body{
+            background-color: palevioletred;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ReGex(Regular Expressions)</h1>
+    </header>
+    <input type="text" name="" id="user">
+    <button onclick="test()">Test</button><br><br>
+    <form onsubmit="submitForm()">
+        <input type="text" name="" id="username" placeholder="username">
+        <input type="password" name="" id="pass" placeholder="password">
+        <input type="submit" name="" id="">
+    </form>
+</body>
+<script>
+    function submitForm(){
+        var userName = document.getElementById("username").value;
+        var pass = document.getElementById("pass").value;
+        var userPatt = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/igm;//numbers and letters
+        var passPatt = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/igm;
+        if(userName.match(userPatt)){
+            alert("Username Generated");
+        }
+        else{
+            alert("Username Must Contain only Number and Letters");
+        }
+        if(pass.match(passPatt)){
+            alert("Password Generated");
+        }
+        else{
+            alert("Password Must be 8 characters long and contain Numbers, Letters, Digits and atleast one Special Character");
+        }
+    }
+    function test(){
+        var str = document.getElementById("user").value;
+        var patt = /tazbeen/igm;
+        if(str.match(patt)){
+            alert("Pattern Matched");
+        }
+        else{
+            alert("Pattern no found");
+        }
+    }
+</script>
+</html>
