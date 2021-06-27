@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 39</title>
+    <style>
+        body {
+            background-color: palegreen;
+            text-align: center;
+        }
+
+        h1 {
+            color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Exception Handling(Try and Catch)</h1>
+    </header>
+    <h2>My Name</h2>
+    <h2 id="myName"></h2>
+    <h2 id="myPass"></h2>
+    <input type="text" name="" id="user" placeholder="Enter Username">
+    <input type="text" name="" id="pass" placeholder="Enter Password">
+    <button onclick="test()">Check</button>
+</body>
+<script>
+    function test() {
+        var patt = /[0-9]/i;
+        var myName = document.getElementById("user").value;
+        var myPass = document.getElementById("pass").value;
+        try {
+            if (myName.match(patt) != null) {
+                throw "Username cannot have numbers";
+            }
+            else if (myPass.length < 8) {
+                throw "Password must be more than 8 characters long";
+            }
+            else {
+                throw "User Authenticated";
+            }
+        }
+        catch (err) {
+            document.getElementById("myName").innerText = err;
+        }
+    }
+</script>
+
+</html>
