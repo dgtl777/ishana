@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 40</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(to top, yellow, orange, orangered);
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        #day {
+            display: block;
+        }
+
+        #btn {
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Display and Position</h1>
+    </header>
+    <svg width="400" height="400">
+        <circle id="day" cx="200" cy="200" r="100" style="fill: yellow;"></circle>
+    </svg>
+    <h2></h2>
+    <button id="btn" onclick="change()"></button>
+
+</body>
+<script>
+    var btn = "ON";
+    document.getElementsByTagName("h2")[0].innerText = "Click here to turn on the light";
+    var cdtn = false;
+    document.getElementById("btn").innerText = btn;
+    function change() {
+        if (cdtn == false) {
+            document.getElementById("btn").innerText = "OFF";
+            document.getElementsByTagName("h2")[0].innerText = "Click here to turn off the light";
+            document.getElementById("day").style.fill = "white"
+            document.body.style.backgroundImage =
+                'linear-gradient(blue,black)'
+            cdtn = true;
+        }
+        else {
+            document.getElementById("btn").innerText = "ON";
+            document.getElementsByTagName("h2")[0].innerText = "Click here to turn on the light";
+            document.getElementById("day").style.fill = "yellow";
+            document.body.style.backgroundImage =
+                'linear-gradient(orange,yellow)'
+            cdtn = false;
+        }
+    }
+</script>
+
+</html>

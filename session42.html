@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 42</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: palegoldenrod;
+            text-align: center;
+            height: 200vh;
+        }
+
+        h1 {
+            color: brown;
+        }
+
+        p {
+            color: red;
+        }
+
+        p.text1 {
+            color: red;
+            display: none;
+        }
+
+        p.text2 {
+            color: red;
+            display: block;
+        }
+
+        p.text3 {
+            color: red;
+            display: inline;
+        }
+
+        p.text4 {
+            color: red;
+            display: inline-block;
+        }
+
+        nav {
+            top: 0;
+            position: sticky;
+            height: 40px;
+            background-color: palevioletred;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            font-size: 18px;
+            font-weight: bold;
+
+        }
+
+        a {
+            text-decoration: none;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Display and Position Properties</h1>
+    </header>
+
+    <h2>Display None</h2>
+    <div>
+        Today is the
+        <p class="text1">42nd</p> class
+    </div>
+
+    <h2>Display block</h2>
+    <div>
+        Today is the
+        <p class="text2">42nd</p> class
+    </div>
+
+    <h2>Display Inline</h2>
+    <div>
+        Today is the
+        <p class="text3">42nd</p> class
+    </div>
+
+    <h2>Display Inline-Block</h2>
+    <div>
+        Today is the
+        <p class="text4">42nd</p> class
+    </div>
+
+</body>
+
+</html>
